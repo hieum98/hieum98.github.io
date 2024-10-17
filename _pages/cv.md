@@ -11,54 +11,45 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Computer Science, University of Oregon, 2027 (expected)
+* B.S. in Computer Science, Hanoi University of Science and Technology, 2021
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **03/2023 - Present**: Research Assistant, University of Oregon.
+  * Work on IARPA HIATUS Project
+  * Research on Information Retrieval and Information Extraction
+  * Supervisor: Prof. Thien Huu Nguyen
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* **08/2021 - 03/2023**: NLP Research Residence, VinAI Research.
+  * Worked on Information Extraction and Natural Language Generation
+  * Joined the applied project "Personal Writing Assistant"
+  * Supervisor: Prof. Thien Huu Nguyen, Dr. Dat Quoc Nguyen
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+* **03/2021 - 08/2021**: Intern Residence, VinAI Research.
+  * Researched on Pre-trained Language Models
+  * Constructed a new event detection dataset for the cybersecurity domain
+  * Supervisor: Prof. Thien Huu Nguyen
+
+* **10/2019 - 02/2021**: Research Student, Data Science Laboratory - HUST.
+  * Trained with fundamental knowledge in Machine Learning and Deep Learning
+  * Supervior: Dr. Linh Ngo Van
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages: Strong reading, writing and speaking competencies for English.
+  * IELTS: Overall: 7.0, Listening: 7.0, Reading: 8.0, Speaking: 6.0, Writing: 6.0
+* Programing Language
+  * Python: Professtional.
+  * C, C++, \smallcaps{SQL}: Prior experience.
+* Databases
+  * My\smallcaps{SQL}, Postgre\smallcaps{SQL}, SQLite, Hyperledger.
 
-Publications
+Awards and Achievements
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+* **2024**: *UO's Gurdeep Pall Graduate Student Fellowship* for outstanding graduate students in academic work.
+* **2020**: *First Prize, Relation Extraction Task*, the 7th International Workshop on Vietnamese Language and Speech Processing - VLSP 2020.
+
+Service
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+Reviewer at EMNLP2023,2024; ACL2024; COLLING2024
