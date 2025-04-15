@@ -13,6 +13,7 @@ My research focuses on advancing the fields of Information Retrieval (IR) and In
 
 News
 ======
+* **01/2025**: One paper was accepted at 
 * **10/2024**: One demo paper was accepted at EMNLP2024
 * **01/2024**: One paper was accepted at SIGIR2024
 * **12/2023**: One paper was accepted at AAAI2024 and two papers were accepted at COLING2024
