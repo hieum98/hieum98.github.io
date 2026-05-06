@@ -9,10 +9,12 @@ redirect_from:
 
 Hi I'm a C.S Ph.D. student at University of Oregon under the supervision of Professor [Thien Huu Nguyen](https://ix.cs.uoregon.edu/~thien/). Before joining UO, I was an AI Resident at [VinAI](https://www.vinai.io/). Prior to that, I received my B.S. Degree in Computer Science at [Hanoi University of Science and Technology](https://hust.edu.vn/).
 
-My research focuses on advancing the fields of Information Retrieval (IR) and Information Extraction (IE), with an emphasis on developing efficient and robust techniques for processing huge and diverse textual data. I am particularly interested in enhancing cross-lingual and cross-genre IR capabilities, leveraging Large Language Models (LLMs) to improve retrieval performance across multiple languages and text types. Additionally, I am exploring innovative IE methods for extracting structured information from document-level texts. Through my work, my goal is to contribute to the development of scalable, multilingual, and versatile systems that can facilitate deeper insights and more effective knowledge discovery from vast and varied textual corpora.
+My research develops task-sufficient representations, encodings that preserve task-relevant signal while discarding nuisance variation across languages, contexts, and confounders. Working at the intersection of Information Retrieval (IR) and Information Extraction (IE) with Large Language Models, I study three complementary questions: how such representations can be constructed to generalize across languages, domains, and modalities; how they can be maintained under long-horizon reasoning systems; and how their causal core can be identified under distribution shift. My broader goal is to address the joint problem of learning representations that are simultaneously universal, stable, and identifiable, toward AI systems that reliably retrieve, reason over, and extract structured knowledge from diverse and evolving textual corpora.
 
 News
 ======
+* **03/2026**: Two papers was accepted at ACL2026
+* **06/2025-09/2025**: Joined Amazon AWS as Applied Research Intern
 * **04/2025**: One paper was accepted at SIGIR2025
 * **01/2025**: One paper was accepted at Proceedings of the 1stWorkshop on GenAI Content Detection (GenAIDetect)@ COLING2025
 * **10/2024**: One demo paper was accepted at EMNLP2024
