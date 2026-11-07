@@ -1,0 +1,10 @@
+# Normalize line endings to LF (repo lives on a Windows drive under WSL)
+* text=auto eol=lf
+
+# Force LF line endings, needed for Docker to work on Windows
+*.sh text eol=lf
+
+# Binary assets
+*.pdf binary
+*.jpg binary
+*.png binary

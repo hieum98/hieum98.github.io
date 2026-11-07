@@ -1,0 +1,52 @@
+# Venue badges for the `abbr` field in _bibliography/papers.bib
+"ACL":
+  url: https://aclanthology.org/
+  color: "#b31b1b"
+
+"ACL Findings":
+  url: https://aclanthology.org/
+  color: "#d9534f"
+
+"EMNLP Findings":
+  url: https://aclanthology.org/
+  color: "#3d6fb6"
+
+"EMNLP":
+  url: https://aclanthology.org/
+  color: "#00369f"
+
+"SIGIR":
+  url: https://sigir.org/
+  color: "#0b6e4f"
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#6f42c1"
+
+"LREC-COLING":
+  url: https://aclanthology.org/
+  color: "#e36209"
+
+"*SEM":
+  url: https://aclanthology.org/
+  color: "#795548"
+
+"ECML-PKDD":
+  url: https://ecmlpkdd.org/
+  color: "#1f6feb"
+
+"IUI":
+  url: https://iui.acm.org/
+  color: "#00838f"
+
+"VLSP":
+  url: https://vlsp.org.vn/
+  color: "#5d6d7e"
+
+"GenAIDetect":
+  url: https://aclanthology.org/
+  color: "#8e44ad"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"

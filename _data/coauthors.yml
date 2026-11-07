@@ -1,0 +1,6 @@
+# Co-author links on the publications page.
+# Keys are lowercase last names; only first names listed below are linked,
+# so other co-authors who share a last name are left unlinked.
+"nguyen":
+  - firstname: ["Thien Huu", "Thien", "T. H.", "T."]
+    url: https://ix.cs.uoregon.edu/~thien/

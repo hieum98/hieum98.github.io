@@ -1,0 +1,125 @@
+# Web CV, rendered by al_folio_cv (cv_format: rendercv in _pages/cv.md).
+# Source of truth: ai-job-search/cv/hieu_man_cv/cv.tex (2026-11-07). No phone number on the public site.
+cv:
+  name: Hieu Man
+  label: Ph.D. Candidate in Computer Science, University of Oregon
+  email: hieuman2708.work@gmail.com
+  address:
+    city: Eugene
+    region: OR
+  summary: >-
+    NLP researcher and Ph.D. candidate in Computer Science at the University of Oregon (expected 2027),
+    two-time Amazon Applied Scientist intern, with papers at venues including ACL, SIGIR, EMNLP, and AAAI.
+    My research is on task-aware information modeling: enabling AI systems to identify the information a task depends on,
+    represent it so it stays reliable when language, genre, or topic shifts, and reason over it across many steps.
+    When any step fails, a system can answer confidently from the wrong information, a main reason AI is still hard to trust in high-stakes settings.
+    I want to build retrieval and reasoning systems that learn which evidence to find, keep, and act on.
+
+  social_networks:
+    - network: GitHub
+      username: hieum98
+    - network: LinkedIn
+      username: hieu-man-376b3213a
+    - network: Google Scholar
+      username: no4ETNIAAAAJ
+
+  sections:
+    Education:
+      - institution: University of Oregon
+        location: Eugene, OR
+        url: https://cs.uoregon.edu/
+        studyType: Ph.D.
+        area: Computer Science
+        start_date: 2023-03
+        highlights:
+          - "Advisor: Prof. [Thien Huu Nguyen](https://ix.cs.uoregon.edu/~thien/). Expected graduation: Spring/Summer 2027."
+
+      - institution: University of Oregon
+        location: Eugene, OR
+        url: https://cs.uoregon.edu/
+        studyType: M.S.
+        area: Computer Science
+        start_date: 2023-03
+        end_date: 2025-10
+        highlights:
+          - "Thesis: _Improving Text Representations with Large Language Models_ (ULLME, LUSIFER)."
+
+      - institution: Hanoi University of Science and Technology
+        location: Hanoi, Vietnam
+        url: https://hust.edu.vn/
+        studyType: B.S.
+        area: Information Systems
+        start_date: 2016-09
+        end_date: 2021-04
+
+    Experience:
+      - company: Amazon AWS
+        position: Applied Scientist Intern
+        location: New York, NY
+        start_date: 2026-06
+        end_date: 2026-09
+        highlights:
+          - "**FORK: agent guardrails that explain rejections safely.** Built a guardrail for tool-using LLM agents whose rejection messages help the agent recover without helping the attacker. On FORK-World (677 adaptive-attack scenarios), it cut attack success from 78.4% to 14.1% on average (best baseline: 55.0%) while keeping utility above 85%; on MT-AgentRisk, with environments and tasks unseen in training, from 70.6% to 9.1%."
+          - "**Gradient-free co-evolution.** Co-evolved the guardrail's decision and disclosure skills, kept as a natural-language library, with an attacker that reads every rejection message. Learned from 65 training pairs without weight updates, the frozen library transfers to unseen tasks, environments, and guardrail LLMs. Also built the FORK-World benchmark."
+
+      - company: Amazon AWS
+        position: Applied Scientist Intern
+        location: New York, NY
+        start_date: 2025-06
+        end_date: 2025-09
+        highlights:
+          - "**State-Aware RAG.** Built a trainable working memory (Qwen3-4B extractor) that filters and updates retrieved evidence for multi-hop reasoning, with the retriever and generator frozen. Beat the best memory-augmented and RL-enhanced baselines by 8.6% and 9.3% on average across eight QA benchmarks, six unseen in training (Findings of ACL 2026; [public code](https://github.com/amazon-science/state-aware-rag))."
+          - "**RL post-training with a Path-Outcome Dual Reward.** Designed a reward that also scores every reasoning step with an LLM judge, after an outcome-only reward credited lucky guesses. Trained the extractor with LoRA SFT on about 70K MCTS-synthesized state-action pairs, then with GRPO in verl, using LangGraph for multi-step rollouts on multi-GPU clusters."
+
+      - company: University of Oregon
+        position: Research Assistant
+        location: Eugene, OR
+        start_date: 2023-03
+        highlights:
+          - "**LLM embeddings for retrieval.** Built ULLME (EMNLP 2024 Demo; [open-source](https://github.com/nlp-uoregon/ullme), 1.5B to 8B checkpoints), which unifies contrastive and generation-augmented training and beats LLM2Vec trained on the same data by 1.2 to 2.0 points on MTEB. LUSIFER (SIGIR 2025) adapts an English-centric embedding model to other languages with English-only training, beating E5-Mistral by 3.19 points on average across 14 languages."
+          - "**Agentic RAG over graph and text memory.** Built agentic RAG systems with an explicit working memory for long-horizon reasoning. Co-E ([preprint](https://arxiv.org/abs/2607.23278), 2026) keeps graph and text memory in sync without any training; on an 8B open model, it beats comparable training-free baselines on six multi-hop QA benchmarks (+10.3 EM over HopRAG with GPT-4o on MuSiQue)."
+          - "**Robust representations under distribution shift (IARPA HIATUS).** Built the style embedding model that RTX BBN Technologies, the team lead, selected for the team's submission to the program's evaluations. Developed authorship attribution and machine-generated text detection methods robust across genres, topics, and languages: counterfactual augmentation (SIGIR 2024; released as [ERLAS](https://huggingface.co/Hieuman/erlas), 3,900+ downloads on Hugging Face) and EAVAE (ACL 2026; state of the art on Amazon Reviews, PAN21, and HRS)."
+          - "**Event relations and causality.** Developed document-level event relation and event causality identification methods that capture long-range context, using optimal transport (LREC-COLING 2024) and diffusion models (AAAI 2024)."
+
+      - company: VinAI Research
+        position: NLP Research Resident
+        location: Hanoi, Vietnam
+        url: https://www.vinai.io/
+        start_date: 2021-08
+        end_date: 2023-03
+        highlights:
+          - "**Research shipped as a product.** Synthesized a grammatical error correction dataset, trained an error-detection model, and worked with a product team to ship it as a Microsoft Word add-in."
+          - "**Document-level information extraction.** Built encoders for document-level event-event relation extraction and generation-based models for event causality identification."
+
+    Honors and Awards:
+      - title: Erwin & Gertrude Juilfs Scholarship in Computer and Information Science
+        awarder: University of Oregon
+        date: 2026
+        summary: Awarded to students who show exceptional promise for achievement, as evidenced by originality of research.
+
+      - title: Gurdeep Pall Graduate Student Fellowship
+        awarder: University of Oregon
+        date: 2024
+        summary: Awarded for the overall quality of academic work, commitment to learning, and potential for further academic achievement.
+
+      - title: First Prize, Relation Extraction Task
+        awarder: VLSP 2020 (Vietnamese Language and Speech Processing)
+        date: 2020
+        summary: Rank 1 in the first Vietnamese relation extraction shared task, 66.16% macro-F1, 2.74 points ahead of the runner-up.
+
+    Skills:
+      - name: Languages & Frameworks
+        keywords:
+          - C/C++
+          - Python
+          - PyTorch
+          - JAX/Flax
+      - name: Libraries & Tools
+        keywords:
+          - Git
+          - Bash
+          - SLURM
+          - Hugging Face
+          - vLLM
+          - SGLang
+          - verl

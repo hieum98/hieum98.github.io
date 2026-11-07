@@ -1,0 +1,15 @@
+github_users:
+  - hieum98
+
+repo_description_lines_max: 2
+
+github_repos:
+  - nlp-uoregon/ullme
+  - amazon-science/state-aware-rag
+  - hieum98/lusifer
+  - hieum98/wemg
+  - hieum98/avae
+  - ManHieu/ERLAS
+  - hieum98/DisfusECI
+  - hieum98/HOTECI
+  - hieumdt/SCS-EERE
