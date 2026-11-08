@@ -1,0 +1,48 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// LOCAL OVERRIDE of al_folio_core 1.0.15 assets/css/main.scss.
+// Changes vs. the gem: University of Oregon brand accents in the `with (...)` block,
+// plus a dark-mode hover-text override at the end of this file. When bumping al_folio_core,
+// diff against the gem's main.scss: `bundle exec al-folio upgrade overrides diff assets/css/main.scss`.
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }},
+  // Light-mode accent (--global-theme-color): UO Green, PMS 356
+  $purple-color: #007030,
+  // Dark-mode accent: UO Yellow, PMS 107
+  $cyan-color: #fee11a
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+// Dark mode: text placed on the UO Yellow accent (button hovers, active dropdown items)
+// must be dark; the gem's default white on yellow is unreadable (1.3:1 contrast).
+html[data-theme="dark"] {
+  --global-hover-text-color: #1c1c1d;
+}
