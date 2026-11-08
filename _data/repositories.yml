@@ -1,5 +1,6 @@
-github_users:
-  - hieum98
+# github_users is intentionally unset: it renders the GitHub stats card (with a letter-grade rank) on /repositories/.
+# github_users:
+#   - hieum98
 
 repo_description_lines_max: 2
 
