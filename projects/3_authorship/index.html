@@ -1,0 +1,235 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Robust Authorship Representations | Hieu Man </title> <meta name="author" content="Hieu Man"> <meta name="description" content="Style representations for authorship attribution and machine-generated text detection that hold up across genres, topics, and languages (IARPA HIATUS)."> <meta name="keywords" content="Hieu Man, natural language processing, information retrieval, retrieval-augmented generation, text embeddings, LLM, University of Oregon"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%9A&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://hieum98.github.io/projects/3_authorship/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Hieu</span> Man </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Robust Authorship Representations</h1> <p class="post-description">Style representations for authorship attribution and machine-generated text detection that hold up across genres, topics, and languages (IARPA HIATUS).</p> </header> <article> <p>As part of the IARPA HIATUS program, I developed authorship attribution and machine-generated text detection methods that stay robust when genre, topic, or language shifts. RTX BBN Technologies, the team lead, selected my style embedding model for the team’s submission to the program’s evaluations.</p> <ul> <li> <strong>Counterfactual augmentation</strong> <a class="citation" href="#man2024counterfactual">(Man &amp; Nguyen, 2024)</a>: learns authorship representations that are robust to topic and genre shifts. Released as <a href="https://huggingface.co/Hieuman/erlas" rel="external nofollow noopener" target="_blank">ERLAS</a> on Hugging Face (3,900+ downloads). <a href="https://github.com/ManHieu/ERLAS" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>EAVAE</strong> <a class="citation" href="#man-etal-2026-explainable">(Man et al., 2026)</a>: a variational autoencoder with separate style and content encoders, plus a discriminator that explains its decisions in natural language. State of the art on Amazon Reviews, PAN21, and HRS. <a href="https://github.com/hieum98/avae" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Team systems</strong>: the ALERT system for cross-domain machine-generated text detection <a class="citation" href="#kandula-etal-2025-bbn">(Kandula et al., 2025)</a> and a combination of neural and large-margin contrastive criteria for authorship attribution <a class="citation" href="#kandula2024improved">(Kandula et al., 2024)</a>.</li> </ul> </article> <h2>References</h2> <div class="publications"> <h2 class="bibliography">2026</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#b31b1b"> <a href="https://aclanthology.org/" rel="external nofollow noopener" target="_blank">ACL</a> </abbr> </div> <div id="man-etal-2026-explainable" class="col-sm-8"> <div class="title">Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI</div> <div class="author"> <em>Hieu Man</em>, Van-Cuong Pham, Nghia Trung Ngo, Franck Dernoncourt, and <a href="https://ix.cs.uoregon.edu/~thien/" rel="external nofollow noopener" target="_blank">Thien Huu Nguyen</a> </div> <div class="periodical"> <em>In Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</em>, Jul 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.18653/v1/2026.acl-long.2018" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://aclanthology.org/2026.acl-long.2018/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://aclanthology.org/2026.acl-long.2018.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a> <a href="https://github.com/hieum98/avae" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Learning robust representations of authorial style is crucial for authorship attribution and AI-generated text detection. However, existing methods often struggle with content-style entanglement, where models learn spurious correlations between authors’ writing styles and topics, leading to poor generalization across domains. To address this challenge, we propose Explainable Authorship Variational Autoencoder (EAVAE), a novel framework that explicitly disentangles style from content through architectural separation-by-design. EAVAE first pretrains style encoders using supervised contrastive learning on diverse authorship data, then finetunes with a Variational Autoencoder (VEA) architecture using separate encoders for style and content representations. Disentanglement is enforced through a novel discriminator that not only distinguishes whether pairs of style/content representations belong to the same or different authors/content sources, but also generates natural language explanation for their decision, simultaneously mitigating confounding information and enhancing interpretability. Extensive experiments demonstrate the effectiveness of EAVAE. On authorship attribution, we achieve state-of-the-art performance on various datasets, including Amazon Reviews, PAN21, and HRS. For AI-generated text detection, EAVAE excels in few-shot learning over the M4 dataset.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">man-etal-2026-explainable</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative {AI}}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Man, Hieu and Pham, Van-Cuong and Ngo, Nghia Trung and Dernoncourt, Franck and Nguyen, Thien Huu}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">jul</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{San Diego, California, United States}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computational Linguistics}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{43592--43604}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.18653/v1/2026.acl-long.2018}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://aclanthology.org/2026.acl-long.2018/}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2025</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#8e44ad"> <a href="https://aclanthology.org/" rel="external nofollow noopener" target="_blank">GenAIDetect</a> </abbr> </div> <div id="kandula-etal-2025-bbn" class="col-sm-8"> <div class="title">BBN-U.Oregon’s ALERT system at GenAI Content Detection Task 3: Robust Authorship Style Representations for Cross-Domain Machine-Generated Text Detection</div> <div class="author"> Hemanth Kandula, Chak Fai Li, Haoling Qiu, Damianos Karakos, <em>Hieu Man</em>, <a href="https://ix.cs.uoregon.edu/~thien/" rel="external nofollow noopener" target="_blank">Thien Huu Nguyen</a>, and Brian Ulicny </div> <div class="periodical"> <em>In Proceedings of the 1st Workshop on GenAI Content Detection (GenAIDetect)</em>, Jan 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://aclanthology.org/2025.genaidetect-1.42/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://aclanthology.org/2025.genaidetect-1.42.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a> </div> <div class="abstract hidden"> <p>This paper presents BBN-U.Oregon’s system, ALERT, submitted to the Shared Task 3: Cross-Domain Machine-Generated Text Detection. Our approach uses robust authorship-style representations to distinguish between human-authored and machine-generated text (MGT) across various domains. We employ an ensemble-based authorship attribution (AA) system that integrates stylistic embeddings from two complementary subsystems: one that focuses on cross-genre robustness with hard positive and negative mining strategies and another that captures nuanced semantic-lexical-authorship contrasts. This combination enhances cross-domain generalization, even under domain shifts and adversarial attacks. Evaluated on the RAID benchmark, our system demonstrates strong performance across genres and decoding strategies, with resilience against adversarial manipulation, achieving 91.8% TPR at FPR=5% on standard test sets and 82.6% on adversarial sets.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">kandula-etal-2025-bbn</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{BBN}-{U}.{O}regon's {ALERT} system at {G}en{AI} Content Detection Task 3: Robust Authorship Style Representations for Cross-Domain Machine-Generated Text Detection}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kandula, Hemanth and Li, Chak Fai and Qiu, Haoling and Karakos, Damianos and Man, Hieu and Nguyen, Thien Huu and Ulicny, Brian}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 1st Workshop on GenAI Content Detection (GenAIDetect)}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">jan</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{Abu Dhabi, UAE}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{International Conference on Computational Linguistics}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{358--364}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://aclanthology.org/2025.genaidetect-1.42/}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#0b6e4f"> <a href="https://sigir.org/" rel="external nofollow noopener" target="_blank">SIGIR</a> </abbr> </div> <div id="man2024counterfactual" class="col-sm-8"> <div class="title">Counterfactual Augmentation for Robust Authorship Representation Learning</div> <div class="author"> <em>Hieu Man</em> and <a href="https://ix.cs.uoregon.edu/~thien/" rel="external nofollow noopener" target="_blank">Thien Huu Nguyen</a> </div> <div class="periodical"> <em>In Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1145/3626772.3657956" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1145/3626772.3657956" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/ManHieu/ERLAS" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> <a href="https://huggingface.co/Hieuman/erlas" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Website</a> </div> <div class="abstract hidden"> <p>Authorship attribution is a task that aims to identify the author of given pieces of writing. Authorship representation learning using neural networks has been shown to work in open-set environment settings with hundreds of thousands of authors. However, the performance of authorship attribution models often degrades significantly when texts are from different domains than the training data. In this work, we propose addressing this issue by adopting a novel causal framework for authorship representation learning. Our key insight is to use causal interventions during training to make models robust to differences in domains. Specifically, we introduce generating style-counterfactual examples by retrieving the most similar content texts by different authors on the same topics/domains. This exposes the model to challenging examples with similar content but distinct styles. Furthermore, we introduce causal masking of topic-indicative words to generate content-counterfactual examples. Content-counterfactuals hide topic content to encourage focusing on writing style. Experiments on three disparate domains - Amazon reviews, fanfiction stories, and Reddit comments - demonstrate that our approach significantly outperforms previous state-of-the-art methods for authorship attribution.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">man2024counterfactual</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Counterfactual Augmentation for Robust Authorship Representation Learning}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Man, Hieu and Nguyen, Thien Huu}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3626772.3657956}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3626772.3657956}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#1f6feb"> <a href="https://ecmlpkdd.org/" rel="external nofollow noopener" target="_blank">ECML-PKDD</a> </abbr> </div> <div id="kandula2024improved" class="col-sm-8"> <div class="title">Improved Authorship Attribution with a Combination of Neural and Large-Margin Contrastive Criteria</div> <div class="author"> Hemanth Kandula, Haoling Qiu, Damianos Karakos, Micheal Selvaggio, <em>Hieu Man</em>, <a href="https://ix.cs.uoregon.edu/~thien/" rel="external nofollow noopener" target="_blank">Thien Nguyen</a>, and Brian Ulicny </div> <div class="periodical"> <em>In Proceedings of the Joint European Conference on Machine Learning and Knowledge Discovery in Databases. Industry Track</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://ecmlpkdd.org/2024/program-accepted-papers-industry-track/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">kandula2024improved</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Improved Authorship Attribution with a Combination of Neural and Large-Margin Contrastive Criteria}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Kandula, Hemanth and Qiu, Haoling and Karakos, Damianos and Selvaggio, Micheal and Man, Hieu and Nguyen, Thien and Ulicny, Brian}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the Joint European Conference on Machine Learning and Knowledge Discovery in Databases. Industry Track}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://ecmlpkdd.org/2024/program-accepted-papers-industry-track/}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Hieu Man. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Full list of publications in reverse chronological order. An up-to-date list is also on Google Scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research threads, with the papers and code behind each.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Open-source code for my papers.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Download the PDF version with the button on the right.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "news-one-paper-was-accepted-at-emnlp-2020",
+          title: 'One paper was accepted at EMNLP 2020.',
+          description: "",
+          section: "News",},{id: "news-joined-vinai-research",
+          title: 'Joined VinAI Research.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-aaai-2022",
+          title: 'One paper was accepted at AAAI 2022.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-emnlp-2022",
+          title: 'One paper was accepted at EMNLP 2022.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-acl-2023",
+          title: 'One paper was accepted at ACL 2023.',
+          description: "",
+          section: "News",},{id: "news-started-my-ph-d-at-the-university-of-oregon",
+          title: 'Started my Ph.D. at the University of Oregon.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-emnlp-2023",
+          title: 'One paper was accepted at EMNLP 2023.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-aaai-2024-and-two-papers-were-accepted-at-lrec-coling-2024",
+          title: 'One paper was accepted at AAAI 2024 and two papers were accepted at...',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-sigir-2024",
+          title: 'One paper was accepted at SIGIR 2024.',
+          description: "",
+          section: "News",},{id: "news-one-demo-paper-was-accepted-at-emnlp-2024",
+          title: 'One demo paper was accepted at EMNLP 2024.',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-the-1st-workshop-on-genai-content-detection-genaidetect-coling-2025",
+          title: 'One paper was accepted at the 1st Workshop on GenAI Content Detection (GenAIDetect)...',
+          description: "",
+          section: "News",},{id: "news-one-paper-was-accepted-at-sigir-2025",
+          title: 'One paper was accepted at SIGIR 2025.',
+          description: "",
+          section: "News",},{id: "news-joined-amazon-aws-new-york-as-an-applied-scientist-intern-for-the-summer",
+          title: 'Joined Amazon AWS (New York) as an Applied Scientist Intern for the summer....',
+          description: "",
+          section: "News",},{id: "news-completed-my-m-s-in-computer-science-at-the-university-of-oregon-thesis-improving-text-representations-with-large-language-models",
+          title: 'Completed my M.S. in Computer Science at the University of Oregon (thesis: Improving...',
+          description: "",
+          section: "News",},{id: "news-two-papers-were-accepted-at-acl-2026-eavae-for-generalizable-authorship-attribution-main-conference-and-state-aware-rag-findings",
+          title: 'Two papers were accepted at ACL 2026: EAVAE for generalizable authorship attribution (main...',
+          description: "",
+          section: "News",},{id: "news-returned-to-amazon-aws-new-york-as-an-applied-scientist-intern-working-on-agent-safety",
+          title: 'Returned to Amazon AWS (New York) as an Applied Scientist Intern, working on...',
+          description: "",
+          section: "News",},{id: "news-new-preprint-co-evolving-graph-and-text-memory-for-training-free-multi-hop-question-answering",
+          title: 'New preprint: Co-Evolving Graph and Text Memory for Training-Free Multi-Hop Question Answering.',
+          description: "",
+          section: "News",},{id: "projects-memory-for-retrieval-augmented-reasoning",
+          title: 'Memory for Retrieval-Augmented Reasoning',
+          description: "An explicit working memory that decides which retrieved evidence to keep, update, or discard during multi-hop reasoning.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_memory_rag/";
+            },},{id: "projects-llm-embeddings-for-multilingual-retrieval",
+          title: 'LLM Embeddings for Multilingual Retrieval',
+          description: "Turning large language models into text embedding models that hold up across tasks and languages.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_llm_embeddings/";
+            },},{id: "projects-robust-authorship-representations",
+          title: 'Robust Authorship Representations',
+          description: "Style representations for authorship attribution and machine-generated text detection that hold up across genres, topics, and languages (IARPA HIATUS).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_authorship/";
+            },},{id: "projects-event-relations-and-causality",
+          title: 'Event Relations and Causality',
+          description: "Document-level event relation extraction and event causality identification that capture long-range context.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_event_relations/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%68%69%65%75%6D%61%6E%32%37%30%38.%77%6F%72%6B@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=no4ETNIAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-semanticscholar',
+        title: 'Semantic Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.semanticscholar.org/author/2027979466", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/hieum98", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/hieu-man-376b3213a", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Hieu_Man_CV.pdf", "_blank");
+        },
+      },{
+        id: 'social-huggingface',
+        title: 'Huggingface',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://huggingface.co/Hieuman", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
